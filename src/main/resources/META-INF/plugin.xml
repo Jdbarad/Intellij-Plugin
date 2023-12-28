@@ -11,8 +11,13 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.jdbarad.intellijplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
-
     <applicationListeners>
         <listener class="com.github.jdbarad.intellijplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+    <actions>
+        <action id="AddTextToFileAction" class="com.github.jdbarad.intellijplugin.AddTextToFileAction" text="Add Text To File Action">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut first-keystroke="shift ctrl a" keymap="$default"/>
+        </action>
+    </actions>
 </idea-plugin>
